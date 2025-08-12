@@ -12,3 +12,37 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background-color: orange
+}
+
+#sidebar{
+  background-color: aliceblue;
+  width: 300px;
+  height: 700px
+
+}
+
+#sidebar p{
+  color: black
+  
+}
+
+#logo {
+width: 60px;
+height: 60px;
+margin:10px;
+padding: 5px;
+
+}
+
+#footer {
+  bottom: 0px;
+  left: 0px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
