@@ -21,7 +21,7 @@
   background-color: rgb(242, 181, 69);
 }
 
-#mainSection{
+#mainSection {
   display: flex;
   flex-direction: row;
 }
@@ -50,27 +50,31 @@
 }
 
 .recipe {
-display: flex;
-justify-content: center;
-height: 100px;
+  display: flex;
+  justify-content: left;
+  height: 100px;
+  width: 700px;
+  gap: 50px;
+  padding: 50px;
+  border: solid 5px blue;
 }
 
 .information {
   text-align: left;
-
-
+  padding-top: 0px;
+  margin-top: 0px;
 }
 .imageContainer {
-  height: 100px;
-  width: 100px
-
+  height: 150px;
+  width: 150px;
 }
 
-img{
+img {
   max-height: 100%;
-  max-width: 100%
+  max-width: 100%;
+  padding: 5px;
 }
 
-span{
+span {
   font-weight: bold;
 }
