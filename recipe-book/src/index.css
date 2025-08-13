@@ -21,12 +21,17 @@
   background-color: rgb(242, 181, 69);
 }
 
+#mainSection{
+  display: flex;
+  flex-direction: row;
+}
+
 #sidebar {
   color: #242424;
   background-color: #1888b2;
   text-align: center;
   border-bottom: #242424;
-  width: 300px;
+  width: 250px;
   height: 700px;
 }
 
