@@ -48,3 +48,29 @@
   left: 0px;
   background-color: rgb(242, 181, 69);
 }
+
+.recipe {
+display: flex;
+justify-content: center;
+height: 100px;
+}
+
+.information {
+  text-align: left;
+
+
+}
+.imageContainer {
+  height: 100px;
+  width: 100px
+
+}
+
+img{
+  max-height: 100%;
+  max-width: 100%
+}
+
+span{
+  font-weight: bold;
+}
