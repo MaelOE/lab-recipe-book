@@ -1,5 +1,6 @@
 import recipes from "../assets/recipes.json"
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 function RecipeTable() {
@@ -35,12 +36,11 @@ function RecipeTable() {
 
   return (
     <>
-      <div>
-        <h1>Menu</h1>
-        
-            
+    
+      <div>   
+                
           {recipeList.map((recipe, index) => (
-           
+        <Link to ={`/details/${recipe.id}`}> 
               <div className="recipe" key={recipe.id}>
                 <div className="imageContainer">
                   <img src={recipe.image} alt="recipe image" />
@@ -51,7 +51,7 @@ function RecipeTable() {
                   <button onClick={() => handleDeleteRecipe(index)}>Delete</button>
                 </div>
               </div>
-            
+              </Link>
           ))}
         
       </div>

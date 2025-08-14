@@ -1,11 +1,13 @@
+// import AboutPage from "../Pages/Aboutpage"
+import { Link } from "react-router-dom"
 
 function Sidebar() {
   return (
 
     <>
     <div id="sidebar">
-      <h2><a src=""> Home </a> </h2>
-      <h2><a src=""> About </a> </h2>
+      <Link to = "/"> <h3>Dashboard</h3> </Link>
+      <Link to = "/about"> <h3>About</h3> </Link>
     </div>
 </>
   )
