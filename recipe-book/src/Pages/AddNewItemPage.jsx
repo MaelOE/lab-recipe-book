@@ -1,17 +1,16 @@
 import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
-import RecipeTable from "../components/RecipeTable";
+import AddForm from "../components/AddForm"
 import Navbar from "../components/Navbar";
 
-function DashboardPage() {
+function AddNewItemPage() {
   return (
     <>
       <Navbar />
       <div>
         <div id="mainSection">
           <Sidebar />
-
-          <RecipeTable />
+          <AddForm />
         </div>
       </div>
 
@@ -19,4 +18,4 @@ function DashboardPage() {
     </>
   );
 }
-export default DashboardPage;
+export default AddNewItemPage;

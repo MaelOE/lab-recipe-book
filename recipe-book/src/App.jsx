@@ -8,6 +8,7 @@ import ItemDetailsPage from "./Pages/ItemDetailsPage";
 import NotFoundPage from "./Pages/NotFoundPage";
 
 import { Routes, Route, Link } from "react-router-dom";
+import AddNewItemPage from "./Pages/AddNewItemPage";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path={"/"} element={<DashboardPage/>} />
         <Route path={"/details/:recipeId"} element= {<ItemDetailsPage />}/>
         <Route path={"/about"} element= {<AboutPage />}/>
+        <Route path={"/addRecipe"} element={<AddNewItemPage />}/>
 
         {/* gaurd clause */}
         <Route path={"*"} element= {<NotFoundPage />}/>
