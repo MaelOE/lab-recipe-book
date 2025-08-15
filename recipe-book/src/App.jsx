@@ -6,19 +6,35 @@ import DashboardPage from "./Pages/DashboardPage";
 import AboutPage from "./Pages/Aboutpage";
 import ItemDetailsPage from "./Pages/ItemDetailsPage";
 import NotFoundPage from "./Pages/NotFoundPage";
+import recipes from "./assets/recipes.json"
+import AddNewItemPage from "./Pages/AddNewItemPage";
 
 import { Routes, Route, Link } from "react-router-dom";
-import AddNewItemPage from "./Pages/AddNewItemPage";
+import { useState } from "react";
 
 
 function App() {
+  const [recipeList, setRecipeList] = useState(recipes);
+
+  const addRecipe = (recipe) => {
+    const newRecipe = {
+      id: null,
+      image: null,
+      name: recipe.name,
+      calories: Number(recipe.calories),
+      servings: Number(recipe.servings),
+    };
+    setRecipeList((prev) => [newRecipe, ...prev]);
+  };
+
+
   return (
     <>
       <Routes>
-        <Route path={"/"} element={<DashboardPage/>} />
+        <Route path={"/"} element={<DashboardPage recipeList={recipeList} setRecipeList={setRecipeList}/>} />
         <Route path={"/details/:recipeId"} element= {<ItemDetailsPage />}/>
         <Route path={"/about"} element= {<AboutPage />}/>
-        <Route path={"/addRecipe"} element={<AddNewItemPage />}/>
+        <Route path={"/addRecipe"} element={<AddNewItemPage addRecipe={addRecipe}/>}/>
 
         {/* gaurd clause */}
         <Route path={"*"} element= {<NotFoundPage />}/>
@@ -26,5 +42,6 @@ function App() {
     </>
   );
 }
+
 
 export default App;

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function AddForm() {
+function AddForm({addRecipe}) {
 
 const [recipeName, setRecipeName]=useState("")
 const [calories, setCalories]=useState("")
@@ -34,9 +34,10 @@ const [servings, setServings]=useState("")
         image: null,
         id:null
     }
-    console.log(newRecipe)
-
-
+    addRecipe(newRecipe)
+    setRecipeName("")
+    setCalories("")
+    setServings("")
 
     
   }
@@ -71,7 +72,11 @@ export default AddForm;
 // we have to make a form that collects the 3 inputs
 // we have to submit the form to the dashboard page state
 
-//Edit existing items
+// Update existing items
 // Add an edit button in the recipe detail page
 // Create an edit page similar to the add new item page but with pre-filled data
 // ALlow the user to input data and update the existing page
+
+//Fix the delete button
+// redirect to dashboard page after adding new items
+// set an actual id and img for new food

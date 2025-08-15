@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import RecipeTable from "../components/RecipeTable";
 import Navbar from "../components/Navbar";
 
-function DashboardPage() {
+function DashboardPage({recipeList,setRecipeList}) {
   return (
     <>
       <Navbar />
@@ -11,7 +11,7 @@ function DashboardPage() {
         <div id="mainSection">
           <Sidebar />
 
-          <RecipeTable />
+          <RecipeTable recipeList={recipeList} setRecipeList={setRecipeList} />
         </div>
       </div>
 
