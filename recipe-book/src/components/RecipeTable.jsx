@@ -1,5 +1,3 @@
-import recipes from "../assets/recipes.json";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function RecipeTable({ recipeList, setRecipeList }) {
