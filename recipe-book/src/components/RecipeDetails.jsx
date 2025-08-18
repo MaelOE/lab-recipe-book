@@ -1,11 +1,18 @@
 function RecipeDetails(props) {
-  console.log(props);
-  //   console.log(props.recipeID)
-  //   console.log(props.recipeList)
 
-  // chosenRecipe= Use the filter function to extract the chosen recipe from the one the user asked for
-
-  return <></>;
+const chosenRecipe= props.recipeList.find((element)=> {return element.id === props.recipeId})
+  
+  return (<>
+  <div className="detailsBlock">
+  <img src={chosenRecipe.image} style={{height:"150px", width:"150px"}}></img> 
+  <h1>{chosenRecipe.name}</h1>
+  <h3>{chosenRecipe.calories}</h3>
+  <h3>{chosenRecipe.servings}</h3>
+  </div>
+  
+  
+  
+  </>);
 }
 export default RecipeDetails;
 

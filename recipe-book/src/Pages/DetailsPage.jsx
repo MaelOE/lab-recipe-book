@@ -21,8 +21,7 @@ function DetailsPage(props) {
             setRecipeList={props.setRecipeList}
           />
 
-          <label htmlFor="recipeName">Recipe Name: </label>
-          <input type="text" name="recipeName" value={recipeName} />
+
         </div>
       </div>
 
