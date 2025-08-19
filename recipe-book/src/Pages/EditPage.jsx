@@ -1,4 +1,8 @@
 import { useParams, Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar";
+import EditForm from "../components/EditForm";
+import Footer from "../components/Footer";
 
 function EditPage(props) {
   const { recipeId } = useParams();
@@ -10,7 +14,7 @@ function EditPage(props) {
       <div>
         <div id="mainSection">
           <Sidebar />
-          <EditForm />
+          <EditForm recipeList={props.recipeList} />
         </div>
       </div>
 
