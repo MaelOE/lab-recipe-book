@@ -11,24 +11,23 @@ function RecipeTable({ recipeList, setRecipeList }) {
     <>
       <div>
         {recipeList.map((recipe, index) => (
-          <Link to={`/details/${recipe.id}`}>
-            <div className="recipe" key={recipe.id}>
-              <div className="imageContainer">
-                <img src={recipe.image} alt="recipe image" />
-              </div>
-              <div className="information">
-                <h2>{recipe.name}</h2>
-                <p>
-                  <span>Calories:</span> {recipe.calories} |{" "}
-                  <span>Serving:</span> {recipe.servings} |{" "}
-                  {recipe.calories < 200 ? `Healthy ✔️` : `Go to sport ❌`}
-                </p>
-                <button onClick={() => handleDeleteRecipe(index)}>
-                  Delete
-                </button>
-              </div>
+          <div className="recipe" key={recipe.id}>
+            <div className="imageContainer">
+              <img src={recipe.image} alt="recipe image" />
             </div>
-          </Link>
+            <div className="information">
+              <h2>{recipe.name}</h2>
+              <p>
+                <span>Calories:</span> {recipe.calories} | <span>Serving:</span>{" "}
+                {recipe.servings} |{" "}
+                {recipe.calories < 200 ? `Healthy ✔️` : `Go to sport ❌`}
+              </p>
+              <button onClick={() => handleDeleteRecipe(index)}>Delete</button>
+              <Link to={`/details/${recipe.id}`}>
+                <button>Details</button>
+              </Link>
+            </div>
+          </div>
         ))}
       </div>
     </>
