@@ -3,7 +3,7 @@ import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import RecipeTable from "./components/RecipeTable";
 import DashboardPage from "./Pages/DashboardPage";
-import AboutPage from "./Pages/Aboutpage";
+import AboutPage from "./Pages/AboutPage";
 import DetailsPage from "./Pages/DetailsPage";
 import EditPage from "./Pages/EditPage";
 import NotFoundPage from "./Pages/NotFoundPage";
