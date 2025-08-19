@@ -20,7 +20,7 @@ function DetailsPage(props) {
             recipeList={props.recipeList}
             setRecipeList={props.setRecipeList}
           />
-          <Link to={`/edit/${recipeId}`}> Edit </Link>
+          <Link to={`/edit/${recipeId}`}> <h1>Edit</h1> </Link>
         </div>
       </div>
 
