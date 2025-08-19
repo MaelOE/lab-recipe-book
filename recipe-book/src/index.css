@@ -21,6 +21,13 @@
   background-color: rgb(242, 181, 69);
 }
 
+#navbar .center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  font-size: large;
+}
+
 #mainSection {
   display: flex;
   flex-direction: row;
@@ -31,9 +38,19 @@
   color: #242424;
   background-color: #1888b2;
   text-align: center;
-  border-bottom: #242424;
   width: 250px;
+<<<<<<< HEAD
   min-height: 700px;
+=======
+  min-height: 100vh;
+  font-size: 20px;
+}
+
+#sidebar h3 {
+  color: white;
+  text-decoration: none;
+  border: none;
+>>>>>>> e05ac83 (mini project css)
 }
 
 #logo {
@@ -50,17 +67,48 @@
   background-color: rgb(242, 181, 69);
 }
 
+<<<<<<< HEAD
 .recipe-list {
   max-width: 85%;
   width: 85%;
   height: 80vh;
   margin: 5px;
   padding: 12px;
+=======
+.recipe {
+  display: flex;
+  justify-content: left;
+  height: 100px;
+  width: 700px;
+  gap: 50px;
+  padding: 50px;
+  border: solid 5px blue;
+}
+
+.information {
+  text-align: left;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+.imageContainer {
+  height: 150px;
+  width: 150px;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+  padding: 5px;
+}
+
+.detailsBox {
+>>>>>>> e05ac83 (mini project css)
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
+<<<<<<< HEAD
 .recipe-row,
 .recipe {
   display: flex;
@@ -157,4 +205,16 @@ span {
 .btn-secondary:hover {
   background: rgba(59, 130, 246, 0.2);
   border-color: rgba(59, 130, 246, 0.65);
+=======
+n span {
+  font-weight: bold;
+}
+
+#sidebar a {
+  color: brown;
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 8px 12px;
+>>>>>>> e05ac83 (mini project css)
 }
