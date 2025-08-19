@@ -21,8 +21,6 @@ function EditForm(props) {
       (element) => element.id === params.recipeId
     );
 
-    console.log(clone[chosenRecipeIndex]);
-
     clone[chosenRecipeIndex].name = recipeName;
     clone[chosenRecipeIndex].calories = calories;
     clone[chosenRecipeIndex].servings = servings;

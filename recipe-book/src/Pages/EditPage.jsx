@@ -14,7 +14,7 @@ function EditPage(props) {
       <div>
         <div id="mainSection">
           <Sidebar />
-          <EditForm recipeList={props.recipeList} />
+          <EditForm recipeList={props.recipeList} setRecipeList={props.setRecipeList} />
         </div>
       </div>
 
