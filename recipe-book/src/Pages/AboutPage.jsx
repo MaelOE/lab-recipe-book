@@ -24,7 +24,7 @@ function AboutPage() {
               <li>
                 <span>Alejandro</span>
                 <a
-                  href="https://github.com/..."
+                  href="https://github.com/AlejandroDuqueG-design"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -34,7 +34,7 @@ function AboutPage() {
               <li>
                 <span>Dillan</span>
                 <a
-                  href="https://github.com/..."
+                  href=" https://github.com/dillanDataNerd "
                   target="_blank"
                   rel="noreferrer"
                 >
