@@ -24,6 +24,7 @@
 #mainSection {
   display: flex;
   flex-direction: row;
+  overflow-x: hidden;
 }
 
 #sidebar {
@@ -32,7 +33,7 @@
   text-align: center;
   border-bottom: #242424;
   width: 250px;
-  height: 700px;
+  min-height: 700px;
 }
 
 #logo {
@@ -49,46 +50,111 @@
   background-color: rgb(242, 181, 69);
 }
 
-.recipe {
-  display: flex;
-  justify-content: left;
-  height: 100px;
-  width: 700px;
-  gap: 50px;
-  padding: 50px;
-  border: solid 5px blue;
-}
-
-.information {
-  text-align: left;
-  padding-top: 0px;
-  margin-top: 0px;
-}
-.imageContainer {
-  height: 150px;
-  width: 150px;
-}
-
-img {
-  max-height: 100%;
-  max-width: 100%;
-  padding: 5px;
-
-
-}
-
-.detailsBox{
+.recipe-list {
+  max-width: 85%;
+  width: 85%;
+  height: 80vh;
+  margin: 5px;
+  padding: 12px;
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
+  gap: 12px;
 }
 
-n
+.recipe-row,
+.recipe {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid #4f5051;
+  border-radius: 10px;
+  padding: 12px;
+  width: 100%;
+  max-width: 100%;
+  color: inherit;
+}
+.recipe-row:hover,
+.recipe:hover {
+  border-color:  #d1d5db;
+  transform: translateY(-1px);
+}
+.recipe-img,
+.imageContainer {
+  width: 96px;
+  height: 96px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #1d1d1d;
+}
+.recipe-img img,
+.imageContainer img,
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  padding: 0;
+}
 
+.recipe-main,
+.information {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+  padding-top: 0;
+  margin-top: 0;
+}
+.recipe-title,
+.information h2 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+.recipe-meta,
+.information p {
+  margin: 0;
+  font-size: 0.95rem;
+}
 span {
   font-weight: bold;
 }
 
- a{
-color: brown;
- }
+.recipe-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.btn {
+  border: 1px solid var(--border);
+  background: #1a1f2e;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.btn:hover {
+  background: #20283b;
+  border-color: #4a4a4a;
+}
+
+.btn-danger {
+  border-color: rgba(239, 68, 68, 0.45);
+  background: rgba(239, 68, 68, 0.14);
+}
+.btn-danger:hover {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.65);
+}
+
+.btn-secondary {
+  border-color: rgba(59, 130, 246, 0.45);
+  background: rgba(59, 130, 246, 0.14);
+}
+.btn-secondary:hover {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.65);
+}

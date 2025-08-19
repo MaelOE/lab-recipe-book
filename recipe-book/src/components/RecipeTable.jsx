@@ -7,31 +7,38 @@ function RecipeTable({ recipeList, setRecipeList }) {
     setRecipeList(cloneList);
   };
 
-  return (
-    <>
-      <div>
-        {recipeList.map((recipe, index) => (
-          <div className="recipe" key={recipe.id}>
-            <div className="imageContainer">
-              <img src={recipe.image} alt="recipe image" />
-            </div>
-            <div className="information">
-              <h2>{recipe.name}</h2>
-              <p>
-                <span>Calories:</span> {recipe.calories} | <span>Serving:</span>{" "}
-                {recipe.servings} |{" "}
-                {recipe.calories < 200 ? `Healthy ✔️` : `Go to sport ❌`}
-              </p>
-              <button onClick={() => handleDeleteRecipe(index)}>Delete</button>
-              <Link to={`/details/${recipe.id}`}>
-                <button>Details</button>
-              </Link>
-            </div>
+return (
+    <div className="recipe-list">
+      {recipeList.map((recipe, index) => (
+        <div className="recipe-row" key={recipe.id}>
+          <div className="recipe-img">
+            <img src={recipe.image} alt={`${recipe.name}`} />
           </div>
-        ))}
-      </div>
-    </>
+
+          <div className="recipe-main">
+            <h3 className="recipe-title">{recipe.name}</h3>
+            <p className="recipe-meta">
+              <span><strong>Serving:</strong> {recipe.servings}</span> |{" "}
+              <span><strong>Calories:</strong> {recipe.calories}</span> |{" "}
+              <span className={`health ${recipe.calories < 200 ? "good" : "bad"}`}>
+                {recipe.calories < 200 ? "Healthy ✔️" : "Go do some sport ❌"}
+              </span>
+            </p>
+          </div>
+
+          <div className="recipe-actions">
+            <button className="btn btn-danger" onClick={() => handleDeleteRecipe(index)}>
+              Delete
+            </button>
+            <Link className="btn btn-secondary" to={`/details/${recipe.id}`}>
+              Details
+            </Link>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 }
+
 
 export default RecipeTable;
